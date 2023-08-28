@@ -153,7 +153,7 @@ void DoublyLinkedList::update_at(int position, Student value)
     }
 }
 
-Student DoublyLinkedList::get_at(int position)
+Student *DoublyLinkedList::get_at(int position)
 {
     if (isEmpty())
     {
@@ -172,5 +172,10 @@ Student DoublyLinkedList::get_at(int position)
         }
         current = current->next;
     }
-    return current->student;
+    return &current->student;
+}
+
+void DoublyLinkedList::push(Student value)
+{
+    push_back(value);
 }

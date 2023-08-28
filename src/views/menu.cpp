@@ -29,25 +29,15 @@ void Menu::list(string title)
          << "=== MOI BAN LUA CHON ===.\n";
 }
 
-void Menu::stack()
+void Menu::stackQueue(string title)
 {
-    cout << "========= STACK ==========.\n"
+    cout << "========= " << title << " ==========.\n"
          << "1) Kiem tra xem queue co rong hay khong.\n"
          << "2) Xuat danh sach cac sinh vien.\n"
          << "3) Them mot sinh vien.\n"
-         << "4) Lay va xoa thong tin sinh vien dau danh sach.\n"
-         << "5) Thoat chuong trinh.\n"
-         << "=== MOI BAN LUA CHON ===.\n";
-}
-
-void Menu::queue()
-{
-    cout << "========= QUEUE ==========.\n"
-         << "1) Kiem tra xem queue co rong hay khong.\n"
-         << "2) Xuat danh sach cac sinh vien.\n"
-         << "3) Them mot sinh vien.\n"
-         << "4) Lay va xoa thong tin sinh vien dau danh sach.\n"
-         << "5) Thoat chuong trinh.\n"
+         << "4) Xuat thong tin sinh vien dau danh sach.\n"
+         << "5) Lay va xoa thong tin sinh vien dau danh sach.\n"
+         << "6) Thoat chuong trinh.\n"
          << "=== MOI BAN LUA CHON ===.\n";
 }
 

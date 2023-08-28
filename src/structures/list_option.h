@@ -1,7 +1,7 @@
-#ifndef STRUCT_OPTIONS
-#define STRUCT_OPTIONS
+#ifndef LIST_OPTIONS
+#define LIST_OPTIONS
 
-enum ListOption
+enum class ListOption
 {
     INSERT,
     UPDATE,

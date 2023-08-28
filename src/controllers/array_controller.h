@@ -1,16 +1,10 @@
 #include "../structures/array.h"
-#include "../services/student_service.h"
-#include "../structures/comparator.h"
-#include "../models/student.h"
-#include "../structures/list.h"
-
-using namespace std;
-
+#include "../services/student_service_list.h"
 class ArrayController
 {
 private:
     Array *store;
-    StudentService *service;
+    StudentServiceList *service;
 
 public:
     ArrayController();

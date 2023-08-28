@@ -4,39 +4,31 @@ void Router::doublyList(ListOption option)
 {
     switch (option)
     {
-    case PRINT:
+    case ListOption::PRINT:
         doublyListController->print();
-        system("pause");
         break;
-    case MAX_POINT:
+    case ListOption::MAX_POINT:
         doublyListController->max_point();
-        system("pause");
         break;
-    case MIN_POINT:
+    case ListOption::MIN_POINT:
         doublyListController->min_point();
-        system("pause");
         break;
-    case SORT_BY_POINT:
+    case ListOption::SORT_BY_POINT:
         doublyListController->sort();
-        system("pause");
         break;
-    case REMOVE:
+    case ListOption::REMOVE:
         doublyListController->remove();
-        system("pause");
         break;
-    case INSERT:
+    case ListOption::INSERT:
         doublyListController->insert();
-        system("pause");
         break;
-    case FIND_BY_CHAR:
+    case ListOption::FIND_BY_CHAR:
         doublyListController->find();
-        system("pause");
         break;
-    case UPDATE:
+    case ListOption::UPDATE:
         doublyListController->update();
-        system("pause");
         break;
-    case EXIT:
+    case ListOption::EXIT:
         break;
     default:
         throw "Invalid option";

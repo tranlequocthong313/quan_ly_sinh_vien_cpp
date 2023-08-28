@@ -1,16 +1,10 @@
-#include "../structures/array.h"
-#include "../services/student_service.h"
-#include "../structures/comparator.h"
-#include "../models/student.h"
+#include "../services/student_service_list.h"
 #include "../structures/linked_list.h"
-
-using namespace std;
-
 class LinkedListController
 {
 private:
     LinkedList *store;
-    StudentService *service;
+    StudentServiceList *service;
 
 public:
     LinkedListController();

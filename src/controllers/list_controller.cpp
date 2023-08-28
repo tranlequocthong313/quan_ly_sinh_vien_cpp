@@ -1,20 +1,11 @@
-#include "../structures/array.h"
-#include "../structures/linked_list.h"
-#include <iostream>
 #include "../utils/io.h"
 #include "list_controller.h"
 #include "../utils/sort_student_by_point.h"
-
-#define NUM_OF_ALPHABET 26
-#define START_OF_ALPHABET_IN_ASCII 97
-
-using namespace std;
-
 LinkedListController::LinkedListController()
 {
     store = new LinkedList;
     read_from_file("src\\data\\sinh_vien.txt", store);
-    service = new StudentService(store);
+    service = new StudentServiceList(store);
 }
 
 LinkedListController::~LinkedListController()

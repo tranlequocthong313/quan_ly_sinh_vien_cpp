@@ -19,6 +19,15 @@ void print_student(Student *student)
     cout << "Diem: " << student->getPoint() << endl;
 }
 
+void print_students(Student *student, int size)
+{
+    for (auto i = 0; i < size; i++)
+    {
+        cout << "\n\t\t Thong tin sinh vien thu " << i + 1 << endl;
+        print_student(&student[i]);
+    }
+}
+
 Student *enter_student()
 {
     cout << "- Nhap vao thong tin sinh vien ma ban muon them." << endl;
@@ -40,7 +49,7 @@ Student *enter_student()
     return new Student(id, name, day, month, year, point);
 }
 
-Student *read_from_file(string filename, List *structure)
+Student *read_from_file(string filename, Pushable *structure)
 {
     ifstream fileIn(filename);
     char id[20], name[30];
@@ -66,7 +75,7 @@ Student *read_from_file(string filename, List *structure)
             fileIn >> point;
 
             Student s(id, name, day, month, year, point);
-            structure->push_back(s);
+            structure->push(s);
         }
         fileIn.close();
     }

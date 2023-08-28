@@ -7,14 +7,14 @@
 #define NUM_OF_ALPHABET 26
 #define START_OF_ALPHABET_IN_ASCII 97
 
-class StudentService
+class StudentServiceList
 {
 private:
     List *ds;
 
 public:
-    StudentService(List *ds);
-    ~StudentService();
+    StudentServiceList(List *ds);
+    ~StudentServiceList();
     void min_point();
     void max_point();
     void print();

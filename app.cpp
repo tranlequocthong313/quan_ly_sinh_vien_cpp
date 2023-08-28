@@ -2,7 +2,6 @@
 #include "./src/views/menu.h"
 #include "./src/routes/router.h"
 #include <unordered_map>
-#include "./src/structures/struct_options.h"
 #include "./src/utils/io.h"
 #include <ctime>
 #include <limits>
@@ -27,6 +26,24 @@ int main()
     listOptions[8] = ListOption::UPDATE;
     listOptions[9] = ListOption::EXIT;
 
+    unordered_map<int, VectorOption> vectorOptions;
+    vectorOptions[1] = VectorOption::CHECK_EMPTY;
+    vectorOptions[2] = VectorOption::PRINT;
+    vectorOptions[3] = VectorOption::PUSH;
+    vectorOptions[4] = VectorOption::GET_FIRST;
+    vectorOptions[5] = VectorOption::GET_AND_POP;
+    vectorOptions[6] = VectorOption::EXIT;
+
+    unordered_map<int, TreeOption> treeOptions;
+    treeOptions[1] = TreeOption::PRINT;
+    treeOptions[2] = TreeOption::PREORDER;
+    treeOptions[3] = TreeOption::INORDER;
+    treeOptions[4] = TreeOption::POSTORDER;
+    treeOptions[5] = TreeOption::INSERT;
+    treeOptions[6] = TreeOption::FIND;
+    treeOptions[7] = TreeOption::REMOVE;
+    treeOptions[8] = TreeOption::EXIT;
+
     srand((int)time(0));
 
     while (true)
@@ -45,6 +62,7 @@ int main()
                 menu.list("ARRAY");
                 option = get_option(1, 9);
                 router.array(listOptions[option]);
+                system("pause");
                 cin.ignore(numeric_limits<streamsize>::max(), '\n');
             } while (option != 9);
             break;
@@ -57,6 +75,7 @@ int main()
                 menu.list("LINKED LIST");
                 option = get_option(1, 9);
                 router.list(listOptions[option]);
+                system("pause");
                 cin.ignore(numeric_limits<streamsize>::max(), '\n');
             } while (option != 9);
             break;
@@ -69,19 +88,50 @@ int main()
                 menu.list("DOUBLY LINKED LIST");
                 option = get_option(1, 9);
                 router.doublyList(listOptions[option]);
+                system("pause");
                 cin.ignore(numeric_limits<streamsize>::max(), '\n');
             } while (option != 9);
             break;
         }
         case 4:
-            menu.stack();
+        {
+            int option;
+            do
+            {
+                menu.stackQueue("STACK");
+                option = get_option(1, 6);
+                router.stack(vectorOptions[option]);
+                system("pause");
+                cin.ignore(numeric_limits<streamsize>::max(), '\n');
+            } while (option != 6);
             break;
+        }
         case 5:
-            menu.queue();
+        {
+            int option;
+            do
+            {
+                menu.stackQueue("QUEUE");
+                option = get_option(1, 6);
+                router.queue(vectorOptions[option]);
+                system("pause");
+                cin.ignore(numeric_limits<streamsize>::max(), '\n');
+            } while (option != 6);
             break;
+        }
         case 6:
-            menu.tree();
+        {
+            int option;
+            do
+            {
+                menu.tree();
+                option = get_option(1, 8);
+                router.tree(treeOptions[option]);
+                system("pause");
+                cin.ignore(numeric_limits<streamsize>::max(), '\n');
+            } while (option != 8);
             break;
+        }
         case 7:
             cout << "=== CAM ON BAN DA SU DUNG CHUONG TRINH CUA CHUNG TOI ===\n";
             exit(0);

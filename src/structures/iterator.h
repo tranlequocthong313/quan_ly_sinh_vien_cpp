@@ -1,3 +1,6 @@
+#ifndef ITERATOR_HEADER
+#define ITERATOR_HEADER
+
 template <typename T>
 class Iterator
 {
@@ -6,3 +9,5 @@ public:
     virtual T *next() = 0;
     virtual void reset_iterator() = 0;
 };
+
+#endif

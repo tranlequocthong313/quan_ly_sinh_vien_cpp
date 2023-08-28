@@ -152,7 +152,7 @@ void LinkedList::update_at(int position, Student value)
     }
 }
 
-Student LinkedList::get_at(int position)
+Student *LinkedList::get_at(int position)
 {
     if (isEmpty())
     {
@@ -171,5 +171,10 @@ Student LinkedList::get_at(int position)
         }
         current = current->next;
     }
-    return current->student;
+    return &current->student;
+}
+
+void LinkedList::push(Student value)
+{
+    push_back(value);
 }

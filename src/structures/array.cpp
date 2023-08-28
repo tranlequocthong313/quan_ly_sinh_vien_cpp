@@ -137,7 +137,7 @@ void Array::update_at(int position, Student value)
     store[position] = value;
 }
 
-Student Array::get_at(int position)
+Student *Array::get_at(int position)
 {
     if (isEmpty())
     {
@@ -147,7 +147,7 @@ Student Array::get_at(int position)
     {
         throw "Out of bounds";
     }
-    return store[position];
+    return &store[position];
 }
 
 bool Array::isEmpty()
@@ -178,4 +178,9 @@ Student *Array::next()
 void Array::reset_iterator()
 {
     pointer = 0;
+}
+
+void Array::push(Student value)
+{
+    push_back(value);
 }

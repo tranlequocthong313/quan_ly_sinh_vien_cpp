@@ -4,39 +4,31 @@ void Router::list(ListOption option)
 {
     switch (option)
     {
-    case PRINT:
+    case ListOption::PRINT:
         listController->print();
-        system("pause");
         break;
-    case MAX_POINT:
+    case ListOption::MAX_POINT:
         listController->max_point();
-        system("pause");
         break;
-    case MIN_POINT:
+    case ListOption::MIN_POINT:
         listController->min_point();
-        system("pause");
         break;
-    case SORT_BY_POINT:
+    case ListOption::SORT_BY_POINT:
         listController->sort();
-        system("pause");
         break;
-    case REMOVE:
+    case ListOption::REMOVE:
         listController->remove();
-        system("pause");
         break;
-    case INSERT:
+    case ListOption::INSERT:
         listController->insert();
-        system("pause");
         break;
-    case FIND_BY_CHAR:
+    case ListOption::FIND_BY_CHAR:
         listController->find();
-        system("pause");
         break;
-    case UPDATE:
+    case ListOption::UPDATE:
         listController->update();
-        system("pause");
         break;
-    case EXIT:
+    case ListOption::EXIT:
         break;
     default:
         throw "Invalid option";

@@ -2,14 +2,16 @@
 #define IO_HEADER
 
 #include "../models/student.h"
-#include "../structures/list.h"
 #include <string>
+#include "../structures/pushable.h"
 
 void print_student(Student *student);
 
+void print_students(Student *student, int size);
+
 Student *enter_student();
 
-Student *read_from_file(string filename, List *structure);
+Student *read_from_file(string filename, Pushable *structure);
 
 int get_option(
     int min,

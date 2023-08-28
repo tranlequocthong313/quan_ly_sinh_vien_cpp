@@ -30,12 +30,13 @@ public:
     bool isEmpty();
     bool isFull();
     int getSize();
-    void push_back(Student Student);
+    void push_back(Student value);
     bool hasNext();
     Student *next();
     void reset_iterator();
     void update_at(int position, Student value);
-    Student get_at(int position);
+    Student *get_at(int position);
+    void push(Student value);
 };
 
 #endif
